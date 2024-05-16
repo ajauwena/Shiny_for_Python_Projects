@@ -1,4 +1,15 @@
-# --- Palmer Penguins App ---
+"""
+====================
+Palmer Penguins App
+====================
+
+--- Instructions ---
+    1)  Execute "source .venv_shiny/bin/activete" to activate the virtual environment required to run this app.
+    2)  Execute "shiny run app.py --reload".
+
+--- Output(s) ---
+    -   A Shiny app.
+"""
 
 # region: --- Modules ---
 
@@ -39,9 +50,10 @@ app_ui = ui.page_fluid(
 def server(input, output, session):
 
     # Define the absolute path to the "penguins.csv" file.
-    abs_path_penguins = '/mnt/c/Users/ajauw/OneDrive/Documents/3P/W/Programming/Python/Projects/Palmer_Penguins_App/penguins.csv' # Change this path to the absolute path to the "penguins.csv" file stored in your machine.
-    # Read the "penguins.csv" file. The file is read outside the "summary()" function to increase code efficiency (the code does not have to re-read the "penguins.csv" file every time the user changes the input).
-    penguins = pd.read_csv(abs_path_penguins)
+    abs_path_penguins = '/mnt/c/Users/ajauw/OneDrive/Documents/3P/W/Programming/Python/Projects/Palmer_Penguins_App/penguins.csv' # Change this path to the absolute path to the file stored in your local machine.
+
+    # Read the "penguins.csv" file.
+    penguins = pd.read_csv(abs_path_penguins) # The file is read outside the functions below to increase code efficiency, since the code does not have to re-read the "penguins.csv" file every time the user changes the input.
 
     # Tell Shiny to perform reactive calculations on the function below.
     @reactive.Calc
@@ -49,7 +61,7 @@ def server(input, output, session):
     def data_filterer():
         # Copy the "penguins.csv" file to prevent the original file from being altered.
         df_penguins = penguins.copy()
-        # Only display rows in the "df_penguins" DataFrame containing body masses greater than what the user inputs (see the "ui.input_slider" function above).
+        # Only display rows in the "df_penguins" DataFrame containing body masses greater than what the user inputs via the "ui.input_slider" function above.
         df_penguins = df_penguins.loc[df_penguins['body_mass_g'] > input.mass()]
         # Return the "df_penguins" DataFrame.
         return df_penguins
