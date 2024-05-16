@@ -68,7 +68,7 @@ def server(input, output, session):
 
     # Tell Shiny to induce a reactive effect on the function below.
     @reactive.Effect
-    # Tell Shiny the event to which it should respond with a reactive effect.
+    # Tell Shiny the event it should respond to with a reactive effect.
     @reactive.event(input.reset)
     # Define a function that induces a reactive effect. "_" is the naming convention for a reactive effect function.
     def _():
