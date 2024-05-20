@@ -4,7 +4,9 @@ Insurance Premium Data Explorer App
 ====================================
 
 --- Instructions ---
-    -   See "master_script.py".
+    1.  Activate your virtual environment, which should have the "shiny" library installed in it.
+    2.  Execute "cd Insurance_Premium_Data_Explorer_App" to go into the "Insurance_Premium_Data_Explorer_App" directory.
+    3.  Execute "shiny run --reload" to run this script.
 
 --- Output(s) ---
     -   A Shiny app.
