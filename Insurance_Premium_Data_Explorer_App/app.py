@@ -74,7 +74,7 @@ def server(input, output, session):
         # Create a histogram for the chosen variable.
         hist_selected_variable = (
             ggplot(df, aes(x=input.variable_select())) +
-            geom_histogram(alpha=0.5) + # Add "binwidth" arguments for each variable.
+            geom_histogram(alpha=0.5) +
             # Define the title and the label for the y-axis.
             labs(title=f'Distribution of the "{input.variable_select()}" Variable', y='Count') +
             # Use the light theme.
