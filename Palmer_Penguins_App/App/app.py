@@ -4,14 +4,14 @@ Palmer Penguins App
 ====================
 
 --- Instructions ---
-    1)  Execute "source .venv_shiny/bin/activete" to activate the virtual environment required to run this app.
-    2)  Execute "shiny run app.py --reload".
+    1.  Activate a virtual environment, which should have the "shiny" library installed in it.
+    2.  Execute "shiny run app.py --reload".
 
 --- Output(s) ---
     -   A Shiny app.
 """
 
-# region: --- Modules ---
+# region: --- Importing Modules ---
 
 from shiny import App, render, ui, reactive # The "reactive" module allows for reactive calculations.
 import pandas as pd
