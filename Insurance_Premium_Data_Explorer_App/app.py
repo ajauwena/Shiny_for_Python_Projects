@@ -4,7 +4,7 @@ Insurance Premium Data Explorer App
 ====================================
 
 --- Instructions ---
-    1.  Activate your virtual environment, which should have the "shiny" library installed in it.
+    1.  Activate your virtual environment, which should have the libraries listed in this script installed in it.
     2.  Execute "cd Insurance_Premium_Data_Explorer_App" to go into the "Insurance_Premium_Data_Explorer_App" directory.
     3.  Execute "shiny run --reload" to run this script.
 
