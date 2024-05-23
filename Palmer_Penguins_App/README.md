@@ -1,3 +1,3 @@
 # Palmer Penguins App
 
-TBA
+Full description to be added.

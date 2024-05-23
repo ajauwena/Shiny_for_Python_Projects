@@ -1,12 +1,11 @@
 """
-====================================
-Insurance Premium Data Explorer App
-====================================
+======================================
+Insurance Premium Data Visualizer App
+======================================
 
 --- Instructions ---
     1.  Activate your virtual environment, which should have the libraries listed in this script installed in it.
-    2.  Execute "cd Insurance_Premium_Data_Explorer_App" to go into the "Insurance_Premium_Data_Explorer_App" directory.
-    3.  Execute "shiny run --reload" to run this script.
+    2.  Execute "shiny run --reload" to run this script.
 
 --- Output(s) ---
     -   A Shiny app.
@@ -38,7 +37,7 @@ df.columns = list_col_names_caps
 # Create a fluid page.
 app_ui = ui.page_fluid(
     # Create a title for the application.
-    ui.panel_title('Insurance Premium Data Explorer'),
+    ui.panel_title('Insurance Premium Data Visualizer'),
     # Create a sidebar layout component.
     ui.layout_sidebar(
         # Create a sidebar element.
